@@ -4,8 +4,6 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 #container strong {
@@ -24,4 +22,11 @@
 
 #container a {
   text-decoration: none;
+}
+#tabs {
+  position: -webkit-sticky;
+}
+
+#titulo {
+  text-align: center;
 }
