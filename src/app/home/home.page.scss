@@ -4,6 +4,7 @@
   position: absolute;
   left: 0;
   right: 0;
+  padding-bottom: 10%;
 }
 
 #container strong {
@@ -23,10 +24,11 @@
 #container a {
   text-decoration: none;
 }
-#tabs {
-  position: -webkit-sticky;
-}
 
 #titulo {
   text-align: center;
+}
+
+.imagen {
+  padding-bottom: 5%;
 }
