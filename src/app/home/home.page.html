@@ -12,73 +12,24 @@
   </ion-header>
 
   <div id="container">
-    <ion-card>
+    <ion-card *ngFor= "let HomeCards of HomeCards; let i=index;">
       <ion-card-header>
-        <ion-img src="../../assets/img/bosque.jpg" class="imagen"></ion-img>
-        <ion-card-subtitle>{{nombre}}</ion-card-subtitle>
-        <ion-card-title>Donacion 1</ion-card-title>
+        <ion-img *ngIf="proyecto != undefined " src="{{proyecto[i].Imagen}}" class="imagen"></ion-img>
+        <ion-card-subtitle *ngIf="proyecto != undefined " class="Subtitulo">{{proyecto[i].Subtitulo}}</ion-card-subtitle>
+        <ion-card-title *ngIf="proyecto != undefined ">{{proyecto[i].Nombre}}</ion-card-title>
       </ion-card-header>
-      <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit
-        clean.
+      <ion-card-content *ngIf="proyecto != undefined ">
+        {{proyecto[i].Descripcion}}
       </ion-card-content>
       <ion-button color="light" class="Boton">
         <ion-icon slot="start" name="cash-outline" color="success"></ion-icon>
         Contribuye con una donación
       </ion-button>
     </ion-card>
-    <ion-card>
-      <ion-card-header>
-        <ion-img src="../../assets/img/bosque.jpg" class="imagen"></ion-img>
-        <ion-card-subtitle>Bosques en acción</ion-card-subtitle>
-        <ion-card-title>Donacion 2</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit
-        clean.
-      </ion-card-content>
-      <ion-button color="light" class="Boton">
-        <ion-icon slot="start" name="cash-outline" color="success"></ion-icon>
-        Contribuye con una donación
-      </ion-button>
-    </ion-card>
-    <ion-card>
-      <ion-card-header>
-        <ion-img src="../../assets/img/bosque.jpg" class="imagen"></ion-img>
-        <ion-card-subtitle>Caritas</ion-card-subtitle>
-        <ion-card-title>Donacion 3</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit
-        clean.
-      </ion-card-content>
-      <ion-button color="light" class="Boton">
-        <ion-icon slot="start" name="cash-outline" color="success"></ion-icon>
-        Contribuye con una donación
-      </ion-button>
-    </ion-card>
-    <ion-card>
-      <ion-card-header>
-        <ion-img src="../../assets/img/bosque.jpg" class="imagen"></ion-img>
-        <ion-card-subtitle>Apaguemos el Fuego</ion-card-subtitle>
-        <ion-card-title>Donacion 4</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit
-        clean.
-      </ion-card-content>
-      <ion-button color="light" class="Boton">
-        <ion-icon slot="start" name="cash-outline" color="success"></ion-icon>
-        Contribuye con una donación
-      </ion-button>
-    </ion-card>
+
   </div>
 </ion-content>
-<ion-footer class="ion-no-border">
+<ion-footer class="ion-no-border" id="footer">
   <ion-toolbar>
     <ion-tabs>
       <ion-tab-bar slot="bottom">

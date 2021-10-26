@@ -7,13 +7,13 @@ import { HomeService } from './home.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-public nombre: any;
+  HomeCards: any[] =Array(10);
+public proyecto: any;
   constructor(private homeService: HomeService) {}
 
   ngOnInit(){
         this.homeService.getProyecto().subscribe(data =>{
-          //console.log(data);
-          this.nombre=data[0].Nombre;
+          this.proyecto=data;
         })
       }
 

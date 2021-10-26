@@ -30,10 +30,16 @@
 }
 
 .imagen {
-  padding-bottom: 5%;
+  border-radius: 2.5% !important;
+  overflow: hidden;
+}
+
+.Subtitulo{
+  padding-top: 5%;
 }
 
 .Boton {
   text-align: center;
   margin-bottom: 5%;
 }
+
