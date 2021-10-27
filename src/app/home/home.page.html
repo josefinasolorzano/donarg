@@ -12,7 +12,7 @@
   </ion-header>
 
   <div id="container">
-    <ion-card *ngFor= "let HomeCards of HomeCards; let i=index;">
+    <ion-card *ngFor= "let HomeCard of HomeCards; let i=index;">
       <ion-card-header>
         <ion-img *ngIf="proyecto != undefined " src="{{proyecto[i].Imagen}}" class="imagen"></ion-img>
         <ion-card-subtitle *ngIf="proyecto != undefined " class="Subtitulo">{{proyecto[i].Subtitulo}}</ion-card-subtitle>
@@ -26,8 +26,8 @@
         Contribuye con una donación
       </ion-button>
     </ion-card>
-
   </div>
+
 </ion-content>
 <ion-footer class="ion-no-border" id="footer">
   <ion-toolbar>
@@ -36,7 +36,6 @@
         <ion-tab-button tab="home" [routerLink]="['/home']">
           <ion-icon name="home-outline"></ion-icon>
           <ion-label>Home</ion-label>
-          <ion-badge>6</ion-badge>
         </ion-tab-button>
 
         <ion-tab-button tab="Nuevo" [routerLink]="['/publicacion']">
