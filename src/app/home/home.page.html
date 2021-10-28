@@ -12,16 +12,24 @@
   </ion-header>
 
   <div id="container">
-    <ion-card *ngFor= "let HomeCard of HomeCards; let i=index;">
+    <ion-card *ngFor="let HomeCard of HomeCards; let i=index;">
       <ion-card-header>
-        <ion-img *ngIf="proyecto != undefined " src="{{proyecto[i].Imagen}}" class="imagen"></ion-img>
-        <ion-card-subtitle *ngIf="proyecto != undefined " class="Subtitulo">{{proyecto[i].Subtitulo}}</ion-card-subtitle>
-        <ion-card-title *ngIf="proyecto != undefined ">{{proyecto[i].Nombre}}</ion-card-title>
+        <ion-img
+          *ngIf="proyecto != undefined "
+          src="{{proyecto[i].Imagen}}"
+          class="imagen"
+        ></ion-img>
+        <ion-card-subtitle *ngIf="proyecto != undefined " class="Subtitulo"
+          >{{proyecto[i].Subtitulo}}</ion-card-subtitle
+        >
+        <ion-card-title *ngIf="proyecto != undefined "
+          >{{proyecto[i].Nombre}}</ion-card-title
+        >
       </ion-card-header>
       <ion-card-content *ngIf="proyecto != undefined ">
         {{proyecto[i].Descripcion}}
       </ion-card-content>
-      <ion-button color="light" class="Boton">
+      <ion-button color="light" class="Boton" href="https://mpago.la/29f6B19">
         <ion-icon slot="start" name="cash-outline" color="success"></ion-icon>
         Contribuye con una donación
       </ion-button>
@@ -30,12 +38,11 @@
     <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
       <ion-infinite-scroll-content
         loadingSpinner="bubbles"
-        loadingText="Cargando...">
+        loadingText="Cargando..."
+      >
       </ion-infinite-scroll-content>
     </ion-infinite-scroll>
-
   </div>
-
 </ion-content>
 <ion-footer class="ion-no-border" id="footer">
   <ion-toolbar>
