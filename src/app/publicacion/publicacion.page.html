@@ -5,61 +5,60 @@
 </ion-header>
 
 <ion-content>
-  <form>
-    <ion-item lines="full">
-      <ion-label position="floating">Título</ion-label>
-      <ion-input type="text" required></ion-input>
+  <ion-item lines="full">
+    <ion-label position="floating">Título</ion-label>
+    <ion-input type="text" [(ngModel)]="titulo" required></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Subtítulo</ion-label>
+    <ion-input type="text" [(ngModel)]="subtitulo" required></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Descripción</ion-label>
+    <ion-input type="email" [(ngModel)]="descripcion" required></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Monto</ion-label>
+    <ion-input type="number" [(ngModel)]="monto" required></ion-input>
+  </ion-item>
+
+  <!-- Checkboxes -->
+  <ion-list lines="full">
+    <ion-list-header>
+      <ion-label>Categorías</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Personal</ion-label>
+      <ion-checkbox></ion-checkbox>
     </ion-item>
-
-    <ion-item lines="full">
-      <ion-label position="floating">Subtítulo</ion-label>
-      <ion-input type="text" required></ion-input>
+    <ion-item>
+      <ion-label>Ambiental</ion-label>
+      <ion-checkbox></ion-checkbox>
     </ion-item>
-
-    <ion-item lines="full">
-      <ion-label position="floating">Descripción</ion-label>
-      <ion-input type="email" required></ion-input>
+    <ion-item>
+      <ion-label>Humanitaria</ion-label>
+      <ion-checkbox></ion-checkbox>
     </ion-item>
-
-    <ion-item lines="full">
-      <ion-label position="floating">Monto</ion-label>
-      <ion-input type="number" required></ion-input>
+    <ion-item>
+      <ion-label>Animal</ion-label>
+      <ion-checkbox></ion-checkbox>
     </ion-item>
+  </ion-list>
 
-    <ion-item lines="full">
-      <ion-label position="floating">Teléfono</ion-label>
-      <ion-input type="number" required></ion-input>
-    </ion-item>
-
-    <!-- Checkboxes -->
-    <ion-list lines="full">
-      <ion-list-header>
-        <ion-label>Categorías</ion-label>
-      </ion-list-header>
-      <ion-item>
-        <ion-label>Personal</ion-label>
-        <ion-checkbox></ion-checkbox>
-      </ion-item>
-      <ion-item>
-        <ion-label>Ambiental</ion-label>
-        <ion-checkbox></ion-checkbox>
-      </ion-item>
-      <ion-item>
-        <ion-label>Humanitaria</ion-label>
-        <ion-checkbox></ion-checkbox>
-      </ion-item>
-      <ion-item>
-        <ion-label>Animal</ion-label>
-        <ion-checkbox></ion-checkbox>
-      </ion-item>
-    </ion-list>
-
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" color="secondary" expand="block">Enviar</ion-button>
-      </ion-col>
-    </ion-row>
-  </form>
+  <ion-row>
+    <ion-col>
+      <ion-button
+        (click)="enviarinfo()"
+        type="submit"
+        color="secondary"
+        expand="block"
+        >Enviar</ion-button
+      >
+    </ion-col>
+  </ion-row>
 </ion-content>
 <ion-footer class="ion-no-border">
   <ion-toolbar>
