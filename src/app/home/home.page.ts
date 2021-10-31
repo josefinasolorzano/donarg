@@ -7,7 +7,7 @@ import { HomeService } from './home.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  HomeCards: any[] = Array(2);
+  HomeCards: any[] = Array(1);
   public proyecto: any;
   constructor(private homeService: HomeService) {}
 
@@ -21,7 +21,7 @@ export class HomePage {
     setTimeout(() => {
       console.log('Done');
 
-      var masHomeCards = Array(2);
+      var masHomeCards = Array(1);
       this.HomeCards.push(...masHomeCards);
       event.target.complete();
 
@@ -31,7 +31,10 @@ export class HomePage {
       //  event.target.disabled = true;
       //}
 
-      if (this.HomeCards.length == this.proyecto.length) {
+
+      console.log("HomeCards ",this.HomeCards.length)
+      console.log("proyecto ",this.proyecto.length)      
+      if (this.HomeCards.length >= this.proyecto.length) {
         event.target.disabled = true;
       }
     }, 1000);
